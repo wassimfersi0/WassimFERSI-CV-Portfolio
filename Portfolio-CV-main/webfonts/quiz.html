@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>JavaScript Quiz</title>
+</head>
+<body>
+  <h1>JavaScript Quiz</h1>
+  <form>
+    <p>Q1: What is the correct syntax for referring to an external script called "xxx.js"?</p>
+    <input type="radio" name="q1" value="A"> <code>&lt;script href="xxx.js"&gt;&lt;/script&gt;</code><br>
+    <input type="radio" name="q1" value="B"> <code>&lt;script src="xxx.js"&gt;&lt;/script&gt;</code><br>
+    <input type="radio" name="q1" value="C"> <code>&lt;script name="xxx.js"&gt;&lt;/script&gt;</code><br>
+    <p>Q2: How do you create a function in JavaScript?</p>
+    <input type="radio" name="q2" value="A"> <code>function:myFunction()</code><br>
+    <input type="radio" name="q2" value="B"> <code>function myFunction()</code><br>
+    <input type="radio" name="q2" value="C"> <code>myFunction:function()</code><br>
+    <p><input type="button" value="Submit" onclick="checkAnswers()"></p>
+  </form>
+  <script>
+    function checkAnswers() {
+      var score = 0;
+      var q1 = document.querySelector('input[name="q1"]:checked').value;
+      var q2 = document.querySelector('input[name="q2"]:checked').value;
+      if (q1 === "B") {
+        score++;
+      }
+      if (q2 === "B") {
+        score++;
+      }
+      alert("You scored " + score + " out of 2");
+    }
+  </script>
+</body>
+</html>
